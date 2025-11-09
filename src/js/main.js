@@ -431,11 +431,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const dots = Array.from(dotsNav?.children || []);
 
     const updateCarousel = (index) => {
-      // Update track position
-      const slideWidth = slides[0].getBoundingClientRect().width;
-      track.style.transform = `translateX(-${slideWidth * index}px)`;
-
-      // Update active states
+      // Update active states for opacity-based carousel
       slides.forEach((slide, i) => {
         slide.classList.toggle('active', i === index);
       });
