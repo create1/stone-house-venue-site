@@ -41,15 +41,75 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero" style="min-height: 60vh;">
+  <section class="hero hero-collage" style="min-height: 60vh;">
     <div class="hero-overlay"></div>
-    <img src="../src/images/Spaces/interior-dining-2.avif" alt="Stone House Spaces" class="hero-bg">
+    <div class="hero-collage-grid">
+      <div class="collage-item"><img src="../src/images/Spaces/Palour/Parlor.png" alt="The Parlour"></div>
+      <div class="collage-item"><img src="../src/images/Spaces/Lounge/Lounge.png" alt="The Lounge"></div>
+      <div class="collage-item"><img src="../src/images/Spaces/Greathall/GreatHallWeb.png" alt="The Great Hall"></div>
+      <div class="collage-item"><img src="../src/images/Spaces/Courtyard/CourtyardEvents.jpg" alt="The Courtyard"></div>
+      <div class="collage-item"><img src="../src/images/Spaces/Cavern/Cavern.png" alt="The Cavern"></div>
+      <div class="collage-item"><img src="../src/images/Spaces/Showroom/Screenshot 2025-11-08 at 5.52.02 PM.png" alt="The Showroom"></div>
+      <div class="collage-item"><img src="../src/images/Spaces/Penthouse/Apartment.jpg" alt="The Suite"></div>
+      <div class="collage-item"><img src="../src/images/Spaces/Cavern/Cavern2.png" alt="Cavern Wine Storage"></div>
+    </div>
     <div class="hero-content">
       <p class="small-caps fade-in">Discover</p>
       <h1 class="fade-in">Our Unique Spaces</h1>
       <p class="hero-subtitle fade-in">Versatile venues for any event</p>
     </div>
   </section>
+
+  <style>
+    .hero-collage {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-collage-grid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 2px;
+    }
+
+    .collage-item {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .collage-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .collage-item:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Make some items span multiple cells for visual interest */
+    .collage-item:nth-child(3) {
+      grid-column: span 2;
+    }
+
+    @media (max-width: 768px) {
+      .hero-collage-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+      }
+
+      .collage-item:nth-child(3) {
+        grid-column: span 1;
+      }
+    }
+  </style>
 
   <!-- Intro Section -->
   <section class="section">
