@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book your event at Stone House in Nevada City. Request pricing and availability for weddings, corporate events, and social gatherings.">
+  <title>Book Your Event | Stone House Nevada City</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Open+Sans:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../src/css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="logo">
+        STONE HOUSE
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="spaces.html" class="nav-link">Spaces</a></li>
+        <li class="nav-item"><a href="weddings.html" class="nav-link">Weddings</a></li>
+        <li class="nav-item"><a href="corporate.html" class="nav-link">Corporate</a></li>
+        <li class="nav-item"><a href="social.html" class="nav-link">Social</a></li>
+        <li class="nav-item"><a href="nonprofit.html" class="nav-link">Nonprofit</a></li>
+        <li class="nav-item"><a href="catering.html" class="nav-link">Catering</a></li>
+        <li class="nav-item"><a href="booking.html" class="btn btn-primary">Book Now</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" style="min-height: 50vh;">
+    <div class="hero-overlay"></div>
+    <img src="../src/images/Spaces/Greathall/GreatHallWeb.png" alt="Book Your Event" class="hero-bg">
+    <div class="hero-content">
+      <p class="small-caps fade-in">Start Planning</p>
+      <h1 class="fade-in">Book Your Event</h1>
+      <p class="hero-subtitle fade-in">Let's Create Something Unforgettable</p>
+    </div>
+  </section>
+
+  <!-- Booking Form Section -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2" style="gap: 3rem; align-items: start;">
+        <!-- Form -->
+        <div>
+          <h2 class="mb-md reveal">Request Event Information</h2>
+          <p class="mb-lg reveal">Fill out the form below and our team will contact you within 24 hours with customized pricing and availability for your event.</p>
+
+          <form id="bookingForm" class="reveal">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+              <label for="eventType">Event Type *</label>
+              <select id="eventType" name="eventType" required>
+                <option value="">Select Event Type</option>
+                <option value="wedding">Wedding</option>
+                <option value="corporate">Corporate Event</option>
+                <option value="social">Social Celebration</option>
+                <option value="nonprofit">Nonprofit Event</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="eventDate">Preferred Event Date</label>
+              <input type="date" id="eventDate" name="eventDate">
+            </div>
+
+            <div class="form-group">
+              <label for="guestCount">Estimated Guest Count *</label>
+              <input type="number" id="guestCount" name="guestCount" min="1" required>
+            </div>
+
+            <div class="form-group">
+              <label for="spaces">Interested Spaces</label>
+              <select id="spaces" name="spaces">
+                <option value="">Select a Space</option>
+                <option value="great-hall">Great Hall</option>
+                <option value="showroom">Showroom</option>
+                <option value="lounge">Lounge</option>
+                <option value="parlour">Parlour</option>
+                <option value="courtyard">Courtyard</option>
+                <option value="cavern">Cavern Wine Cave</option>
+                <option value="full-venue">Full Venue Buyout</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="catering">Catering Services</label>
+              <select id="catering" name="catering">
+                <option value="">Select Catering Option</option>
+                <option value="full-service">Full Service Catering</option>
+                <option value="appetizers">Appetizers & Cocktails</option>
+                <option value="plated-dinner">Plated Dinner</option>
+                <option value="buffet">Buffet Style</option>
+                <option value="family-style">Family Style</option>
+                <option value="bar-only">Bar Service Only</option>
+                <option value="outside-catering">Using Outside Caterer</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Additional Details</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us more about your event vision, special requirements, or questions..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+          </form>
+        </div>
+
+        <!-- Pricing Information -->
+        <div>
+          <div class="card reveal" style="position: sticky; top: 100px;">
+            <div class="card-content">
+              <h3 class="mb-md">Custom Event Pricing</h3>
+              <p class="mb-md">Stone House offers customized pricing based on your specific event needs. Our packages are tailored to include:</p>
+
+              <ul style="list-style: none; padding: 0; margin-bottom: 1.5rem;">
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-light);">
+                  <i class="fas fa-check" style="color: var(--color-secondary); margin-right: 0.5rem;"></i>
+                  Venue Space Rental
+                </li>
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-light);">
+                  <i class="fas fa-check" style="color: var(--color-secondary); margin-right: 0.5rem;"></i>
+                  Farm-to-Table Catering Options
+                </li>
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-light);">
+                  <i class="fas fa-check" style="color: var(--color-secondary); margin-right: 0.5rem;"></i>
+                  Full-Service Bar
+                </li>
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-light);">
+                  <i class="fas fa-check" style="color: var(--color-secondary); margin-right: 0.5rem;"></i>
+                  Event Coordination
+                </li>
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-light);">
+                  <i class="fas fa-check" style="color: var(--color-secondary); margin-right: 0.5rem;"></i>
+                  Tables, Chairs & Linens
+                </li>
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--color-light);">
+                  <i class="fas fa-check" style="color: var(--color-secondary); margin-right: 0.5rem;"></i>
+                  Audio/Visual Equipment
+                </li>
+                <li style="padding: 0.5rem 0;">
+                  <i class="fas fa-check" style="color: var(--color-secondary); margin-right: 0.5rem;"></i>
+                  On-Site Support Staff
+                </li>
+              </ul>
+
+              <div style="background-color: var(--color-light); padding: 1.5rem; border-radius: 4px; margin-bottom: 1.5rem;">
+                <h4 style="margin-bottom: 0.75rem;">Pricing Factors</h4>
+                <p style="margin-bottom: 0.5rem; font-size: 0.95rem;">Your custom quote is based on:</p>
+                <ul style="font-size: 0.9rem; margin-left: 1.25rem;">
+                  <li>Event date and day of week</li>
+                  <li>Number of guests</li>
+                  <li>Spaces required</li>
+                  <li>Catering menu selections</li>
+                  <li>Bar service level</li>
+                  <li>Additional services needed</li>
+                </ul>
+              </div>
+
+              <p style="font-size: 0.9rem; color: var(--color-gray); margin-bottom: 1rem;">
+                <i class="fas fa-info-circle" style="color: var(--color-secondary);"></i>
+                Special pricing available for nonprofit organizations
+              </p>
+
+              <div style="border-top: 2px solid var(--color-secondary); padding-top: 1.5rem;">
+                <h4 style="margin-bottom: 1rem;">Contact Us Directly</h4>
+                <p style="margin-bottom: 1rem;">
+                  <i class="fas fa-phone" style="color: var(--color-secondary); margin-right: 0.5rem;"></i>
+                  <a href="tel:+15302655050">(530) 265-5050</a>
+                </p>
+                <p style="margin-bottom: 0;">
+                  <i class="fas fa-envelope" style="color: var(--color-secondary); margin-right: 0.5rem;"></i>
+                  <a href="mailto:bookings@stonehouse.io">bookings@stonehouse.io</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Book Section -->
+  <section class="section section-navy">
+    <div class="container">
+      <div class="text-center mb-lg">
+        <h2 class="reveal">Why Choose Stone House</h2>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card reveal">
+          <div class="card-content text-center">
+            <i class="fas fa-landmark" style="font-size: 3rem; color: var(--color-secondary); margin-bottom: 1rem;"></i>
+            <h3 class="card-title">Historic Elegance</h3>
+            <p class="card-text">A beautifully restored venue dating back to the 1800s, offering unique character and charm that modern venues can't replicate.</p>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-content text-center">
+            <i class="fas fa-utensils" style="font-size: 3rem; color: var(--color-secondary); margin-bottom: 1rem;"></i>
+            <h3 class="card-title">Farm-to-Table Catering</h3>
+            <p class="card-text">Locally sourced, seasonal ingredients prepared by our talented culinary team. Every menu is customized to your preferences.</p>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-content text-center">
+            <i class="fas fa-hands-helping" style="font-size: 3rem; color: var(--color-secondary); margin-bottom: 1rem;"></i>
+            <h3 class="card-title">Full-Service Support</h3>
+            <p class="card-text">Our experienced event team handles every detail from planning to execution, ensuring a seamless and stress-free experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- About -->
+        <div class="footer-section">
+          <h4>Stone House</h4>
+          <p>Historic elegance in the heart of Nevada City. Creating unforgettable celebrations since the 1800s.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/stonehousenevadacity" target="_blank" class="social-icon" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/stonehousenevadacity" target="_blank" class="social-icon" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="spaces.html">Spaces</a></li>
+            <li><a href="private-events.html">Private Events</a></li>
+            <li><a href="public-events.html">Public Events</a></li>
+            <li><a href="tel:+15302655050">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <ul class="footer-links">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              107 Sacramento Street<br>
+              Nevada City, CA 95959
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <a href="tel:+15302655050">(530) 265-5050</a>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:bookings@stonehouse.io">bookings@stonehouse.io</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Hours -->
+        <div class="footer-section">
+          <h4>Hours</h4>
+          <ul class="footer-links">
+            <li>Monday - Thursday: By Appointment</li>
+            <li>Friday - Sunday: Events & Shows</li>
+            <li>Restaurant Hours Vary</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Stone House. All rights reserved. | Nevada City, California</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../src/js/main.js"></script>
+  <script>
+    // Form submission handler
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Gather form data
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData);
+
+      // Create mailto link with form data
+      const subject = encodeURIComponent(`Event Inquiry - ${data.eventType || 'General'}`);
+      const body = encodeURIComponent(`
+Name: ${data.name}
+Email: ${data.email}
+Phone: ${data.phone}
+Event Type: ${data.eventType}
+Event Date: ${data.eventDate || 'Not specified'}
+Guest Count: ${data.guestCount}
+Spaces: ${data.spaces || 'Not specified'}
+Catering: ${data.catering || 'Not specified'}
+
+Additional Details:
+${data.message || 'None provided'}
+      `);
+
+      // Open email client
+      window.location.href = `mailto:bookings@stonehouse.io?subject=${subject}&body=${body}`;
+
+      // Show success message
+      alert('Thank you for your inquiry! Your email client will open with your request. We\'ll respond within 24 hours.');
+    });
+  </script>
+
+  <style>
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: var(--color-dark);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-family: 'Open Sans', sans-serif;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-secondary);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+    }
+  </style>
+</body>
+</html>
