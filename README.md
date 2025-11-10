@@ -50,7 +50,7 @@ Stone House Venue Site/
 ### Prerequisites
 
 - A modern web browser (Chrome, Firefox, Safari, Edge)
-- A local web server (optional but recommended)
+- Node.js (for local development server)
 
 ### Installation
 
@@ -61,25 +61,27 @@ Stone House Venue Site/
    cd "Stone House Venue Site"
    ```
 
-3. Open the website:
+3. Start the development server:
 
-   **Option A: Direct file opening (simple)**
-   - Open `index.html` in your web browser
+   **Option A: Using the built-in Node.js server (recommended)**
+   ```bash
+   npm start
+   ```
+   Then visit: http://localhost:8080
 
-   **Option B: Using a local server (recommended)**
-
-   With Python 3:
+   **Option B: Using Python**
    ```bash
    python -m http.server 8000
    ```
    Then visit: http://localhost:8000
 
-   With Node.js (using npx):
+   **Option C: Using Node.js directly**
    ```bash
-   npx serve
+   node server.js
    ```
+   Then visit: http://localhost:8080
 
-   With VS Code:
+   **Option D: Using VS Code Live Server**
    - Install the "Live Server" extension
    - Right-click on `index.html` and select "Open with Live Server"
 

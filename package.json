@@ -1,0 +1,18 @@
+{
+  "name": "stone-house-venue-site",
+  "version": "1.0.0",
+  "description": "Stone House - Historic Event Venue Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "venue",
+    "events",
+    "nevada-city",
+    "weddings"
+  ],
+  "author": "Stone House",
+  "license": "ISC"
+}
