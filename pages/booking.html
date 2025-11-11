@@ -59,162 +59,161 @@
         <p class="reveal" style="font-size: 1.1rem; margin-top: 1rem;">Transparent pricing for your perfect event</p>
       </div>
 
-      <!-- Pricing Tables -->
-      <div style="display: grid; gap: 2rem; margin-bottom: 2rem;">
+      <!-- Season Tabs -->
+      <div class="card reveal" style="margin-bottom: 2rem;">
+        <div class="season-tabs">
+          <button class="season-tab active" data-season="offpeak">
+            <span class="season-name">Off-Peak</span>
+            <span class="season-months">Dec - Feb</span>
+          </button>
+          <button class="season-tab" data-season="shoulder">
+            <span class="season-name">Shoulder</span>
+            <span class="season-months">Mar - Apr, Nov</span>
+          </button>
+          <button class="season-tab" data-season="peak">
+            <span class="season-name">Peak</span>
+            <span class="season-months">May - Oct</span>
+          </button>
+        </div>
 
-        <!-- Off-Peak Season -->
-        <div class="card reveal">
-          <div class="card-content">
-            <h3 style="text-align: center; color: var(--color-secondary); margin-bottom: 0.5rem;">Off-Peak Season</h3>
-            <p style="text-align: center; color: var(--color-gray); margin-bottom: 1.5rem; font-size: 0.95rem;">December - February</p>
-
-            <div style="overflow-x: auto;">
-              <table style="width: 100%; border-collapse: collapse; min-width: 600px;">
-                <thead>
-                  <tr style="background-color: var(--color-navy); color: white;">
-                    <th style="padding: 1rem; text-align: left; border: 1px solid #ddd;">Day</th>
-                    <th style="padding: 1rem; text-align: center; border: 1px solid #ddd;">Single Room<br><span style="font-size: 0.85em; font-weight: 400;">(3-hr min)</span></th>
-                    <th style="padding: 1rem; text-align: center; border: 1px solid #ddd;">Two Rooms<br><span style="font-size: 0.85em; font-weight: 400;">(3-hr min)</span></th>
-                    <th style="padding: 1rem; text-align: center; border: 1px solid #ddd;">Full Building Hourly<br><span style="font-size: 0.85em; font-weight: 400;">(3-hr min)</span></th>
-                    <th style="padding: 1rem; text-align: center; border: 1px solid #ddd;">Full Building Day Rate</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; font-weight: 600;">Monday - Thursday</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$250/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$500/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$900/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center; font-weight: 600;">$5,000</td>
-                  </tr>
-                  <tr style="background-color: #f9f9f9;">
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; font-weight: 600;">Friday</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$275/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$550/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$950/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center; font-weight: 600;">$6,000</td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; font-weight: 600;">Saturday</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$300/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$600/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$1,000/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center; font-weight: 600;">$7,000</td>
-                  </tr>
-                  <tr style="background-color: #f9f9f9;">
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; font-weight: 600;">Sunday</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$275/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$550/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$950/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center; font-weight: 600;">$6,500</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+        <!-- Off-Peak Season Content -->
+        <div class="season-content active" id="offpeak-content">
+          <div class="pricing-table-wrapper">
+            <table class="pricing-table">
+              <thead>
+                <tr>
+                  <th class="day-col">Day</th>
+                  <th>Single Room<br><span class="min-text">(3-hr min)</span></th>
+                  <th>Two Rooms<br><span class="min-text">(3-hr min)</span></th>
+                  <th>Full Building Hourly<br><span class="min-text">(3-hr min)</span></th>
+                  <th>Full Building Day Rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="day-col">Mon - Thu</td>
+                  <td>$250/hr</td>
+                  <td>$500/hr</td>
+                  <td>$900/hr</td>
+                  <td class="highlight">$5,000</td>
+                </tr>
+                <tr>
+                  <td class="day-col">Friday</td>
+                  <td>$275/hr</td>
+                  <td>$550/hr</td>
+                  <td>$950/hr</td>
+                  <td class="highlight">$6,000</td>
+                </tr>
+                <tr>
+                  <td class="day-col">Saturday</td>
+                  <td>$300/hr</td>
+                  <td>$600/hr</td>
+                  <td>$1,000/hr</td>
+                  <td class="highlight">$7,000</td>
+                </tr>
+                <tr>
+                  <td class="day-col">Sunday</td>
+                  <td>$275/hr</td>
+                  <td>$550/hr</td>
+                  <td>$950/hr</td>
+                  <td class="highlight">$6,500</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
-        <!-- Shoulder Season -->
-        <div class="card reveal">
-          <div class="card-content">
-            <h3 style="text-align: center; color: var(--color-secondary); margin-bottom: 0.5rem;">Shoulder Season</h3>
-            <p style="text-align: center; color: var(--color-gray); margin-bottom: 1.5rem; font-size: 0.95rem;">March - April, November</p>
-
-            <div style="overflow-x: auto;">
-              <table style="width: 100%; border-collapse: collapse; min-width: 600px;">
-                <thead>
-                  <tr style="background-color: var(--color-navy); color: white;">
-                    <th style="padding: 1rem; text-align: left; border: 1px solid #ddd;">Day</th>
-                    <th style="padding: 1rem; text-align: center; border: 1px solid #ddd;">Single Room<br><span style="font-size: 0.85em; font-weight: 400;">(3-hr min)</span></th>
-                    <th style="padding: 1rem; text-align: center; border: 1px solid #ddd;">Two Rooms<br><span style="font-size: 0.85em; font-weight: 400;">(3-hr min)</span></th>
-                    <th style="padding: 1rem; text-align: center; border: 1px solid #ddd;">Full Building Hourly<br><span style="font-size: 0.85em; font-weight: 400;">(3-hr min)</span></th>
-                    <th style="padding: 1rem; text-align: center; border: 1px solid #ddd;">Full Building Day Rate</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; font-weight: 600;">Monday - Thursday</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$275/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$550/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$950/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center; font-weight: 600;">$6,500</td>
-                  </tr>
-                  <tr style="background-color: #f9f9f9;">
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; font-weight: 600;">Friday</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$325/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$650/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$1,000/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center; font-weight: 600;">$8,000</td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; font-weight: 600;">Saturday</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$375/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$750/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$1,100/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center; font-weight: 600;">$9,000</td>
-                  </tr>
-                  <tr style="background-color: #f9f9f9;">
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; font-weight: 600;">Sunday</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$325/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$650/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$1,000/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center; font-weight: 600;">$8,500</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+        <!-- Shoulder Season Content -->
+        <div class="season-content" id="shoulder-content">
+          <div class="pricing-table-wrapper">
+            <table class="pricing-table">
+              <thead>
+                <tr>
+                  <th class="day-col">Day</th>
+                  <th>Single Room<br><span class="min-text">(3-hr min)</span></th>
+                  <th>Two Rooms<br><span class="min-text">(3-hr min)</span></th>
+                  <th>Full Building Hourly<br><span class="min-text">(3-hr min)</span></th>
+                  <th>Full Building Day Rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="day-col">Mon - Thu</td>
+                  <td>$275/hr</td>
+                  <td>$550/hr</td>
+                  <td>$950/hr</td>
+                  <td class="highlight">$6,500</td>
+                </tr>
+                <tr>
+                  <td class="day-col">Friday</td>
+                  <td>$325/hr</td>
+                  <td>$650/hr</td>
+                  <td>$1,000/hr</td>
+                  <td class="highlight">$8,000</td>
+                </tr>
+                <tr>
+                  <td class="day-col">Saturday</td>
+                  <td>$375/hr</td>
+                  <td>$750/hr</td>
+                  <td>$1,100/hr</td>
+                  <td class="highlight">$9,000</td>
+                </tr>
+                <tr>
+                  <td class="day-col">Sunday</td>
+                  <td>$325/hr</td>
+                  <td>$650/hr</td>
+                  <td>$1,000/hr</td>
+                  <td class="highlight">$8,500</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
-        <!-- Peak Season -->
-        <div class="card reveal">
-          <div class="card-content">
-            <h3 style="text-align: center; color: var(--color-secondary); margin-bottom: 0.5rem;">Peak Season</h3>
-            <p style="text-align: center; color: var(--color-gray); margin-bottom: 1.5rem; font-size: 0.95rem;">May - October</p>
-
-            <div style="overflow-x: auto;">
-              <table style="width: 100%; border-collapse: collapse; min-width: 600px;">
-                <thead>
-                  <tr style="background-color: var(--color-navy); color: white;">
-                    <th style="padding: 1rem; text-align: left; border: 1px solid #ddd;">Day</th>
-                    <th style="padding: 1rem; text-align: center; border: 1px solid #ddd;">Single Room<br><span style="font-size: 0.85em; font-weight: 400;">(3-hr min)</span></th>
-                    <th style="padding: 1rem; text-align: center; border: 1px solid #ddd;">Two Rooms<br><span style="font-size: 0.85em; font-weight: 400;">(3-hr min)</span></th>
-                    <th style="padding: 1rem; text-align: center; border: 1px solid #ddd;">Full Building Hourly<br><span style="font-size: 0.85em; font-weight: 400;">(3-hr min)</span></th>
-                    <th style="padding: 1rem; text-align: center; border: 1px solid #ddd;">Full Building Day Rate</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; font-weight: 600;">Monday - Thursday</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$300/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$600/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$1,000/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center; font-weight: 600;">$7,500</td>
-                  </tr>
-                  <tr style="background-color: #f9f9f9;">
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; font-weight: 600;">Friday</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$375/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$750/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$1,100/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center; font-weight: 600;">$9,000</td>
-                  </tr>
-                  <tr>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; font-weight: 600;">Saturday</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$425/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$850/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$1,200/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center; font-weight: 600;">$10,000</td>
-                  </tr>
-                  <tr style="background-color: #f9f9f9;">
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; font-weight: 600;">Sunday</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$400/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$800/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$1,100/hr</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center; font-weight: 600;">$9,500</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+        <!-- Peak Season Content -->
+        <div class="season-content" id="peak-content">
+          <div class="pricing-table-wrapper">
+            <table class="pricing-table">
+              <thead>
+                <tr>
+                  <th class="day-col">Day</th>
+                  <th>Single Room<br><span class="min-text">(3-hr min)</span></th>
+                  <th>Two Rooms<br><span class="min-text">(3-hr min)</span></th>
+                  <th>Full Building Hourly<br><span class="min-text">(3-hr min)</span></th>
+                  <th>Full Building Day Rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="day-col">Mon - Thu</td>
+                  <td>$300/hr</td>
+                  <td>$600/hr</td>
+                  <td>$1,000/hr</td>
+                  <td class="highlight">$7,500</td>
+                </tr>
+                <tr>
+                  <td class="day-col">Friday</td>
+                  <td>$375/hr</td>
+                  <td>$750/hr</td>
+                  <td>$1,100/hr</td>
+                  <td class="highlight">$9,000</td>
+                </tr>
+                <tr>
+                  <td class="day-col">Saturday</td>
+                  <td>$425/hr</td>
+                  <td>$850/hr</td>
+                  <td>$1,200/hr</td>
+                  <td class="highlight">$10,000</td>
+                </tr>
+                <tr>
+                  <td class="day-col">Sunday</td>
+                  <td>$400/hr</td>
+                  <td>$800/hr</td>
+                  <td>$1,100/hr</td>
+                  <td class="highlight">$9,500</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -471,6 +470,34 @@
   <!-- JavaScript -->
   <script src="../src/js/main.js"></script>
 
+  <!-- Season Tabs Script -->
+  <script>
+    // Season tab switching functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const tabs = document.querySelectorAll('.season-tab');
+      const contents = document.querySelectorAll('.season-content');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          const season = this.getAttribute('data-season');
+
+          // Remove active class from all tabs and contents
+          tabs.forEach(t => t.classList.remove('active'));
+          contents.forEach(c => c.classList.remove('active'));
+
+          // Add active class to clicked tab
+          this.classList.add('active');
+
+          // Show corresponding content
+          const content = document.getElementById(season + '-content');
+          if (content) {
+            content.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+
   <!-- HoneyBook Widget Script -->
   <script>
     (function(h,b,s,n,i,p,e,t) {
@@ -490,6 +517,197 @@
     /* Ensure HoneyBook widget matches site styling */
     .hb-p-606bca06ac67312816c9ca1f-1 {
       width: 100%;
+    }
+
+    /* Season Tabs Styling */
+    .season-tabs {
+      display: flex;
+      gap: 0;
+      margin-bottom: 0;
+      border-bottom: 2px solid var(--color-navy);
+    }
+
+    .season-tab {
+      flex: 1;
+      padding: 1rem;
+      background: white;
+      border: none;
+      border-bottom: 3px solid transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: var(--font-heading);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .season-tab .season-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-dark);
+    }
+
+    .season-tab .season-months {
+      font-size: 0.85rem;
+      color: var(--color-gray);
+      font-weight: 400;
+    }
+
+    .season-tab:hover {
+      background-color: #f8f9fa;
+    }
+
+    .season-tab.active {
+      border-bottom-color: var(--color-secondary);
+      background-color: #fafbfc;
+    }
+
+    .season-tab.active .season-name {
+      color: var(--color-secondary);
+    }
+
+    .season-content {
+      display: none;
+      padding: 2rem 1.5rem;
+    }
+
+    .season-content.active {
+      display: block;
+    }
+
+    /* Pricing Table Styling */
+    .pricing-table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    .pricing-table thead {
+      background-color: var(--color-navy);
+      color: white;
+    }
+
+    .pricing-table th {
+      padding: 0.875rem 0.75rem;
+      text-align: center;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.9rem;
+    }
+
+    .pricing-table th.day-col {
+      text-align: left;
+    }
+
+    .pricing-table .min-text {
+      font-size: 0.75rem;
+      font-weight: 400;
+      opacity: 0.9;
+      display: block;
+      margin-top: 0.25rem;
+    }
+
+    .pricing-table tbody tr {
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .pricing-table tbody tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+
+    .pricing-table tbody tr:hover {
+      background-color: #e9ecef;
+    }
+
+    .pricing-table td {
+      padding: 0.875rem 0.75rem;
+      text-align: center;
+      border: 1px solid #dee2e6;
+    }
+
+    .pricing-table td.day-col {
+      font-weight: 600;
+      text-align: left;
+      color: var(--color-dark);
+    }
+
+    .pricing-table td.highlight {
+      font-weight: 700;
+      color: var(--color-secondary);
+      font-size: 1.05rem;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .season-tabs {
+        flex-direction: column;
+      }
+
+      .season-tab {
+        padding: 0.875rem;
+        border-bottom: 1px solid #dee2e6;
+        border-right: 3px solid transparent;
+      }
+
+      .season-tab.active {
+        border-bottom-color: #dee2e6;
+        border-right-color: var(--color-secondary);
+      }
+
+      .season-tab .season-name {
+        font-size: 1rem;
+      }
+
+      .season-tab .season-months {
+        font-size: 0.8rem;
+      }
+
+      .season-content {
+        padding: 1.5rem 1rem;
+      }
+
+      .pricing-table {
+        font-size: 0.85rem;
+      }
+
+      .pricing-table th,
+      .pricing-table td {
+        padding: 0.625rem 0.5rem;
+      }
+
+      .pricing-table th {
+        font-size: 0.8rem;
+      }
+
+      .pricing-table .min-text {
+        font-size: 0.7rem;
+      }
+
+      .pricing-table td.highlight {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .pricing-table th,
+      .pricing-table td {
+        padding: 0.5rem 0.375rem;
+        font-size: 0.8rem;
+      }
+
+      .pricing-table th {
+        font-size: 0.75rem;
+      }
+
+      .pricing-table .min-text {
+        font-size: 0.65rem;
+      }
     }
   </style>
 </body>
