@@ -495,7 +495,6 @@ document.addEventListener('DOMContentLoaded', function() {
     'weddings/Wedding Shoot 16.webp',
     'weddings/Wedding Shoot 17.webp',
     'weddings/Wedding Shoot 18.webp',
-    'weddings/Wedding Shoot 19.webp',
     'weddings/Wedding Shoot 20.webp',
     'weddings/Wedding Shoot 21.webp',
     'weddings/Wedding Shoot 22.webp',
@@ -517,6 +516,9 @@ document.addEventListener('DOMContentLoaded', function() {
     'weddings/Screenshot 2025-11-08 at 3.47.43 PM.webp',
     'weddings/Wedding Venue Rental Nevada County.webp',
     'weddings/lounge2.webp',
+    'weddings/Sophie+Nic-9430.webp',
+    'weddings/Sophie+Nic-9835.webp',
+    'weddings/Sophie+Nic-9953.webp',
     // Spaces
     'Spaces/Greathall/GreatHallWeb.webp',
     'Spaces/Greathall/Wedding Dinning Room.webp',
@@ -554,6 +556,8 @@ document.addEventListener('DOMContentLoaded', function() {
     'Non Profit/NonprofitEventVenue5.webp',
     'Non Profit/NonProfit.webp',
     'Non Profit/Nonprofit dinner venue.webp',
+    // Catering
+    'Catering/IMG_0176.webp',
     // Other
     '_DSC7541.webp'
   ];
