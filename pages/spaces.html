@@ -321,6 +321,19 @@
     }
 
     @media (max-width: 768px) {
+      .hero {
+        min-height: 60vh !important;
+      }
+
+      .hero-content h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.2;
+      }
+
+      .hero-subtitle {
+        font-size: 1.1rem !important;
+      }
+
       .carousel-btn-prev,
       .carousel-btn-next {
         font-size: 1.5rem;
@@ -341,6 +354,57 @@
 
       .carousel-caption p {
         font-size: 1rem;
+      }
+
+      .carousel-caption {
+        padding: 0.75rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        min-height: 50vh !important;
+      }
+
+      .hero-content h1 {
+        font-size: 2rem !important;
+        line-height: 1.1;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem !important;
+      }
+
+      .small-caps {
+        font-size: 0.85rem !important;
+      }
+
+      .carousel-btn-prev,
+      .carousel-btn-next {
+        font-size: 1.2rem;
+        padding: 0.5rem 0.75rem;
+      }
+
+      .carousel-caption h2 {
+        font-size: 1.2rem;
+      }
+
+      .carousel-caption p {
+        font-size: 0.9rem;
+      }
+
+      .carousel-caption {
+        padding: 0.5rem 1rem;
+        bottom: 15%;
+      }
+
+      .carousel-dots {
+        bottom: 20px;
+      }
+
+      .carousel-dot {
+        width: 8px;
+        height: 8px;
       }
     }
   </style>
