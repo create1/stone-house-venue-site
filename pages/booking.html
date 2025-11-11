@@ -60,79 +60,11 @@
           <h2 class="mb-md reveal">Request Event Information</h2>
           <p class="mb-lg reveal">Fill out the form below and our team will contact you within 24 hours with customized pricing and availability for your event.</p>
 
-          <form id="bookingForm" class="reveal">
-            <div class="form-group">
-              <label for="name">Full Name *</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-
-            <div class="form-group">
-              <label for="phone">Phone Number *</label>
-              <input type="tel" id="phone" name="phone" required>
-            </div>
-
-            <div class="form-group">
-              <label for="eventType">Event Type *</label>
-              <select id="eventType" name="eventType" required>
-                <option value="">Select Event Type</option>
-                <option value="wedding">Wedding</option>
-                <option value="corporate">Corporate Event</option>
-                <option value="social">Social Celebration</option>
-                <option value="nonprofit">Nonprofit Event</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="eventDate">Preferred Event Date</label>
-              <input type="date" id="eventDate" name="eventDate">
-            </div>
-
-            <div class="form-group">
-              <label for="guestCount">Estimated Guest Count *</label>
-              <input type="number" id="guestCount" name="guestCount" min="1" required>
-            </div>
-
-            <div class="form-group">
-              <label for="spaces">Interested Spaces</label>
-              <select id="spaces" name="spaces">
-                <option value="">Select a Space</option>
-                <option value="great-hall">Great Hall</option>
-                <option value="showroom">Showroom</option>
-                <option value="lounge">Lounge</option>
-                <option value="parlour">Parlour</option>
-                <option value="courtyard">Courtyard</option>
-                <option value="cavern">Cavern Wine Cave</option>
-                <option value="full-venue">Full Venue Buyout</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="catering">Catering Services</label>
-              <select id="catering" name="catering">
-                <option value="">Select Catering Option</option>
-                <option value="full-service">Full Service Catering</option>
-                <option value="appetizers">Appetizers & Cocktails</option>
-                <option value="plated-dinner">Plated Dinner</option>
-                <option value="buffet">Buffet Style</option>
-                <option value="family-style">Family Style</option>
-                <option value="bar-only">Bar Service Only</option>
-                <option value="outside-catering">Using Outside Caterer</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="message">Additional Details</label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell us more about your event vision, special requirements, or questions..."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
-          </form>
+          <div class="reveal" id="honeybook-form-container">
+            <!-- HoneyBook Contact Form -->
+            <div class="hb-p-606bca06ac67312816c9ca1f-1"></div>
+            <img height="1" width="1" style="display:none" src="https://www.honeybook.com/p.png?pid=606bca06ac67312816c9ca1f">
+          </div>
         </div>
 
         <!-- Pricing Information -->
@@ -313,72 +245,26 @@
 
   <!-- JavaScript -->
   <script src="../src/js/main.js"></script>
+
+  <!-- HoneyBook Widget Script -->
   <script>
-    // Form submission handler
-    document.getElementById('bookingForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      // Gather form data
-      const formData = new FormData(this);
-      const data = Object.fromEntries(formData);
-
-      // Create mailto link with form data
-      const subject = encodeURIComponent(`Event Inquiry - ${data.eventType || 'General'}`);
-      const body = encodeURIComponent(`
-Name: ${data.name}
-Email: ${data.email}
-Phone: ${data.phone}
-Event Type: ${data.eventType}
-Event Date: ${data.eventDate || 'Not specified'}
-Guest Count: ${data.guestCount}
-Spaces: ${data.spaces || 'Not specified'}
-Catering: ${data.catering || 'Not specified'}
-
-Additional Details:
-${data.message || 'None provided'}
-      `);
-
-      // Open email client
-      window.location.href = `mailto:bookings@stonehouse.io?subject=${subject}&body=${body}`;
-
-      // Show success message
-      alert('Thank you for your inquiry! Your email client will open with your request. We\'ll respond within 24 hours.');
-    });
+    (function(h,b,s,n,i,p,e,t) {
+      h._HB_ = h._HB_ || {};h._HB_.pid = i;;;;
+      t=b.createElement(s);t.type="text/javascript";t.async=!0;t.src=n;
+      e=b.getElementsByTagName(s)[0];e.parentNode.insertBefore(t,e);
+    })(window,document,"script","https://widget.honeybook.com/assets_users_production/websiteplacements/placement-controller.min.js","606bca06ac67312816c9ca1f");
   </script>
 
   <style>
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      color: var(--color-dark);
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
+    /* Style for HoneyBook form container */
+    #honeybook-form-container {
+      min-height: 400px;
       width: 100%;
-      padding: 0.75rem;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      font-size: 1rem;
-      font-family: 'Open Sans', sans-serif;
-      transition: border-color 0.3s ease;
     }
 
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--color-secondary);
-    }
-
-    .form-group textarea {
-      resize: vertical;
+    /* Ensure HoneyBook widget matches site styling */
+    .hb-p-606bca06ac67312816c9ca1f-1 {
+      width: 100%;
     }
   </style>
 </body>
