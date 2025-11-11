@@ -14,5 +14,8 @@
     "weddings"
   ],
   "author": "Stone House",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "sharp": "^0.34.5"
+  }
 }
