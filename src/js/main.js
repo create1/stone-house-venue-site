@@ -521,7 +521,6 @@ document.addEventListener('DOMContentLoaded', function() {
     'Spaces/Greathall/GreatHallWeb.webp',
     'Spaces/Greathall/Wedding Dinning Room.webp',
     'Spaces/Showroom/Screenshot 2025-11-08 at 5.52.02 PM.webp',
-    'Spaces/Showroom/Screenshot 2025-11-08 at 5.56.52 PM.webp',
     'Spaces/Courtyard/CourtyardEvents.webp',
     'Spaces/Cavern/Cavern.webp',
     'Spaces/Cavern/Cavern2.webp',
