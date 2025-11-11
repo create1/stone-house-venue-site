@@ -517,7 +517,6 @@ document.addEventListener('DOMContentLoaded', function() {
     'Spaces/Penthouse/Stone+House+-+APT+Suite+(3)-2.webp',
     'Spaces/Penthouse/Stone+House+-+APT+Suite+(6).webp',
     'Spaces/Penthouse/Stone+House+-+APT+Suite+(7).webp',
-    'Spaces/Penthouse/Stone+House+-+APT+Suite+(9) (1).webp',
     'Spaces/Penthouse/Stone+House+-+APT+Suite+(12).webp',
     'Spaces/Penthouse/Stone+House+-+APT+Suite+(13).webp',
     'Spaces/Penthouse/Stone+House+-+APT+Suite+(14).webp',
