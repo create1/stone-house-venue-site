@@ -473,5 +473,109 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 5000);
   });
 
+  // ===================================
+  // Randomize Gallery Images
+  // ===================================
+  const allImages = [
+    // Weddings
+    'weddings/Wedding Shoot 1.webp',
+    'weddings/Wedding Shoot 2.webp',
+    'weddings/Wedding Shoot 3.webp',
+    'weddings/Wedding Shoot 4.webp',
+    'weddings/Wedding Shoot 5.webp',
+    'weddings/Wedding Shoot 6.webp',
+    'weddings/Wedding Shoot 8.webp',
+    'weddings/Wedding Shoot 9.webp',
+    'weddings/Wedding Shoot 11.webp',
+    'weddings/Wedding Shoot 12.webp',
+    'weddings/Wedding Shoot 13.webp',
+    'weddings/Wedding Shoot 14.webp',
+    'weddings/Wedding Shoot 15.webp',
+    'weddings/Wedding Shoot 23.webp',
+    'weddings/Wedding Party.webp',
+    'weddings/Wedding Venue3.webp',
+    'weddings/Wedding Venue4.webp',
+    'weddings/Wedding Venue5.webp',
+    'weddings/Sophie+Nic-6657.webp',
+    'weddings/S&J-0024.webp',
+    'weddings/Nevada City WeddingsScreenshot 2023-12-26 at 5.42.52 PM.webp',
+    'weddings/Wedding Venue Rental Nevada County.webp',
+    // Spaces
+    'Spaces/Greathall/GreatHallWeb.webp',
+    'Spaces/Greathall/Wedding Dinning Room.webp',
+    'Spaces/Showroom/Screenshot 2025-11-08 at 5.52.02 PM.webp',
+    'Spaces/Showroom/Screenshot 2025-11-08 at 5.56.52 PM.webp',
+    'Spaces/Courtyard/CourtyardEvents.webp',
+    'Spaces/Cavern/Cavern.webp',
+    'Spaces/Cavern/Cavern2.webp',
+    'Spaces/Cavern/Cavern3.webp',
+    'Spaces/Cavern/Cavern4.webp',
+    'Spaces/Lounge/Lounge.webp',
+    'Spaces/Palour/Parlor.webp',
+    'Spaces/Palour/Venue Rental Nevada City_05.webp',
+    'Spaces/Penthouse/Apartment.webp',
+    'Spaces/Penthouse/Stone+House+-+APT+Suite+(1)-2.webp',
+    'Spaces/Penthouse/Stone+House+-+APT+Suite+(3)-2.webp',
+    'Spaces/Penthouse/Stone+House+-+APT+Suite+(6).webp',
+    'Spaces/Penthouse/Stone+House+-+APT+Suite+(7).webp',
+    'Spaces/Penthouse/Stone+House+-+APT+Suite+(9) (1).webp',
+    'Spaces/Penthouse/Stone+House+-+APT+Suite+(12).webp',
+    'Spaces/Penthouse/Stone+House+-+APT+Suite+(13).webp',
+    'Spaces/Penthouse/Stone+House+-+APT+Suite+(14).webp',
+    'Spaces/Penthouse/Stone+House+-+APT+Suite+(15).webp',
+    // Social
+    'Social/BestSocialEventVenue.webp',
+    'Social/Birthday event space.webp',
+    'Social/SocialEventSpace.webp',
+    'Social/SocailEventVenueSpace.webp',
+    'Social/5V7A7840.webp',
+    // Nonprofit
+    'Non Profit/Wild and scenic.webp',
+    'Non Profit/NonProfitAwarenessVenue.webp',
+    'Non Profit/NonProfitEventVenue.webp',
+    'Non Profit/NonProfitEventVenue2.webp',
+    'Non Profit/NonProfitEventVenue3.webp',
+    'Non Profit/NonProfitEventVenue4.webp',
+    'Non Profit/NonprofitEventVenue5.webp',
+    'Non Profit/NonProfit.webp',
+    'Non Profit/Nonprofit dinner venue.webp',
+    // Other
+    '_DSC7541.webp'
+  ];
+
+  function shuffleArray(array) {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+  }
+
+  // Find all galleries and randomize their images
+  const galleries = document.querySelectorAll('.gallery');
+
+  galleries.forEach(gallery => {
+    const galleryItems = gallery.querySelectorAll('.gallery-item');
+    if (galleryItems.length > 0) {
+      // Shuffle all available images
+      const shuffledImages = shuffleArray(allImages);
+
+      // Determine path prefix based on current page
+      const pathPrefix = window.location.pathname.includes('/pages/') ? '../src/images/' : 'src/images/';
+
+      // Update each gallery item with a random image
+      galleryItems.forEach((item, index) => {
+        const img = item.querySelector('img');
+        if (img && shuffledImages[index]) {
+          img.src = pathPrefix + shuffledImages[index];
+          // Update alt text based on image name
+          const imageName = shuffledImages[index].split('/').pop().replace('.webp', '').replace(/[_-]/g, ' ');
+          img.alt = imageName;
+        }
+      });
+    }
+  });
+
   console.log('Stone House website initialized successfully!');
 });
