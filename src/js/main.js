@@ -479,7 +479,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const allImages = [
     // Weddings
     'weddings/Wedding Shoot 1.webp',
-    'weddings/Wedding Shoot 2.webp',
     'weddings/Wedding Shoot 3.webp',
     'weddings/Wedding Shoot 4.webp',
     'weddings/Wedding Shoot 5.webp',
