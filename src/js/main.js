@@ -551,7 +551,6 @@ document.addEventListener('DOMContentLoaded', function() {
     'Non Profit/NonProfitAwarenessVenue.webp',
     'Non Profit/NonProfitEventVenue.webp',
     'Non Profit/NonProfitEventVenue2.webp',
-    'Non Profit/NonProfitEventVenue3.webp',
     'Non Profit/NonProfitEventVenue4.webp',
     'Non Profit/NonprofitEventVenue5.webp',
     'Non Profit/NonProfit.webp',

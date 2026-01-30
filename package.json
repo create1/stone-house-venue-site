@@ -1,7 +1,7 @@
 {
   "name": "stone-house-venue-site",
   "version": "1.0.0",
-  "description": "Stone House - Historic Event Venue Website",
+  "description": "Stone House - Historic Event Venue Website with Automated Booking System",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -11,10 +11,18 @@
     "venue",
     "events",
     "nevada-city",
-    "weddings"
+    "weddings",
+    "booking-system"
   ],
   "author": "Stone House",
   "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "stripe": "^14.10.0",
+    "flatpickr": "^4.6.13",
+    "date-fns": "^3.0.0",
+    "resend": "^3.0.0"
+  },
   "devDependencies": {
     "sharp": "^0.34.5"
   }
