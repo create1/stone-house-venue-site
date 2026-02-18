@@ -11,24 +11,6 @@ const WEDDING_PRICING_CONFIG = {
       peak: { months: [5, 6, 7, 8, 9, 10, 12] }
     },
     options: {
-      singleRoom: {
-        pricing: {
-          offPeak: { monThu: 150, friday: 175, saturday: 200, sunday: 175 },
-          shoulder: { monThu: 175, friday: 200, saturday: 225, sunday: 200 },
-          peak: { monThu: 200, friday: 225, saturday: 250, sunday: 225 }
-        },
-        minimumHours: 3,
-        isFlat: false
-      },
-      partialBuilding: {
-        pricing: {
-          offPeak: { monThu: 250, friday: 300, saturday: 350, sunday: 325 },
-          shoulder: { monThu: 300, friday: 350, saturday: 400, sunday: 350 },
-          peak: { monThu: 350, friday: 400, saturday: 450, sunday: 400 }
-        },
-        minimumHours: 3,
-        isFlat: false
-      },
       fullBuilding: {
         pricing: {
           offPeak: { monThu: 900, friday: 950, saturday: 1000, sunday: 950 },

@@ -34,32 +34,6 @@ export const WEDDING_PRICING_CONFIG = {
 
     // Venue rental options with pricing by season and day
     options: {
-      singleRoom: {
-        id: 'singleRoom',
-        name: 'Single Room',
-        description: '3-hour minimum rental',
-        minimumHours: 3,
-        maximumHours: 12,
-        capacity: 100,
-        pricing: {
-          offPeak: { monThu: 150, friday: 175, saturday: 200, sunday: 175 },
-          shoulder: { monThu: 175, friday: 200, saturday: 225, sunday: 200 },
-          peak: { monThu: 200, friday: 225, saturday: 250, sunday: 225 }
-        }
-      },
-      partialBuilding: {
-        id: 'partialBuilding',
-        name: 'Partial Building',
-        description: '2-3 rooms, 3-hour minimum',
-        minimumHours: 3,
-        maximumHours: 12,
-        capacity: 200,
-        pricing: {
-          offPeak: { monThu: 250, friday: 300, saturday: 350, sunday: 325 },
-          shoulder: { monThu: 300, friday: 350, saturday: 400, sunday: 350 },
-          peak: { monThu: 350, friday: 400, saturday: 450, sunday: 400 }
-        }
-      },
       fullBuilding: {
         id: 'fullBuilding',
         name: 'Full Building',
