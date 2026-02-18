@@ -172,14 +172,13 @@ export class WeddingCalculator {
 
     // === TAX CALCULATION ===
     const taxableSubtotal = 
-      venueCost +
       catering.total +
       beverageTotal +
       serviceFee +
       floralCost +
       djCost;
 
-    const nonTaxableSubtotal = photographyCost + plannerCost;
+    const nonTaxableSubtotal = venueCost + photographyCost + plannerCost;
 
     const salesTaxAmount = WeddingPricingHelpers.roundMoney(taxableSubtotal * this.taxRate);
 

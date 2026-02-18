@@ -327,15 +327,15 @@ export const WEDDING_PRICING_CONFIG = {
 
     // What is taxable vs non-taxable per California law
     taxableCategories: [
-      'venue',
       'catering',
       'beverages',
       'serviceFee',
       'floral',
       'dj'
     ],
-    
+
     nonTaxableCategories: [
+      'venue',
       'photography',
       'weddingPlanner'
     ]

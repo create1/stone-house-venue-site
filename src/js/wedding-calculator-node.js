@@ -141,8 +141,8 @@ class WeddingCalculator {
     const isFullPackage = this.checkFullPackageEligibility(cart);
     const plannerCost = (cart.addOns.weddingPlanner && !isFullPackage) ? 2500 : 0;
 
-    const taxableSubtotal = venueCost + cateringTotal + beverageTotal + serviceFee + floralCost + djCost;
-    const nonTaxableSubtotal = photographyCost + plannerCost;
+    const taxableSubtotal = cateringTotal + beverageTotal + serviceFee + floralCost + djCost;
+    const nonTaxableSubtotal = venueCost + photographyCost + plannerCost;
     const salesTaxAmount = Math.round(taxableSubtotal * this.taxRate * 100) / 100;
     const subtotalWithTax = taxableSubtotal + nonTaxableSubtotal + salesTaxAmount;
     const discountAmount = isFullPackage ? Math.round(subtotalWithTax * 0.10 * 100) / 100 : 0;
