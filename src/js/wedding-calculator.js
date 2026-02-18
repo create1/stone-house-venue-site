@@ -54,6 +54,9 @@ export class WeddingCalculator {
 
     if (!protein1 || !protein2) return 0;
 
+    // If outside catering is selected, return 0 (flat fee handled separately)
+    if (protein1Id === 'outside' || protein2Id === 'outside') return 0;
+
     return (protein1.pricePerPerson + protein2.pricePerPerson) / 2;
   }
 
@@ -61,6 +64,20 @@ export class WeddingCalculator {
    * Calculate catering total
    */
   calculateCateringTotal(guestCount, protein1Id, protein2Id, selectedSides = [], selectedAppetizers = []) {
+    // Check if outside catering is selected
+    if (protein1Id === 'outside' || protein2Id === 'outside') {
+      return {
+        avgProteinPrice: 0,
+        baseCatering: WEDDING_PRICING_CONFIG.catering.outsideCateringFee,
+        sidesCount: 0,
+        sidesCost: 0,
+        appetizersCount: 0,
+        appetizersCost: 0,
+        total: WEDDING_PRICING_CONFIG.catering.outsideCateringFee,
+        isOutsideCatering: true
+      };
+    }
+
     const avgProteinPrice = this.calculateAverageProteinPrice(protein1Id, protein2Id);
     const baseCatering = avgProteinPrice * guestCount;
     

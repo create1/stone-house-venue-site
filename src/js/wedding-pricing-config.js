@@ -68,6 +68,8 @@ export const WEDDING_PRICING_CONFIG = {
   catering: {
     includesSaladAndDessert: true,
     mustSelectTwo: true,
+    allowOutsideCatering: true,
+    outsideCateringFee: 1000,
     
     proteins: [
       {
@@ -101,6 +103,15 @@ export const WEDDING_PRICING_CONFIG = {
         description: 'Premium steak',
         examples: ['Filet Mignon', 'Ribeye', 'NY Strip'],
         image: '../src/images/food/steak-dish.avif'
+      },
+      {
+        id: 'outside',
+        name: 'Outside Catering',
+        price: 1000,
+        isFlat: true,
+        description: 'Approved vendors only',
+        note: 'Bring your own approved caterer. $1,000 fee includes kitchen access and coordination.',
+        image: null
       }
     ],
 

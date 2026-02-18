@@ -536,6 +536,27 @@
   pointer-events: none;
 }
 
+.outside-catering-card {
+  background: linear-gradient(135deg, #FFF8DC 0%, #FFFAF0 100%);
+  border-color: var(--cart-secondary) !important;
+}
+
+.outside-catering-card:hover {
+  border-color: var(--cart-secondary) !important;
+  box-shadow: 0 8px 16px rgba(139, 64, 83, 0.2);
+}
+
+.outside-catering-card.selected {
+  border-color: var(--cart-secondary) !important;
+  background: linear-gradient(to bottom, rgba(139, 64, 83, 0.15), #FFFAF0);
+  box-shadow: 0 8px 20px rgba(139, 64, 83, 0.3);
+}
+
+.outside-catering-card .protein-content {
+  padding: 2rem 1.25rem;
+  text-align: center;
+}
+
 .protein-img {
   width: 100%;
   height: 180px;
