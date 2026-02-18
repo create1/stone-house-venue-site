@@ -52,11 +52,16 @@ export class WeddingCalculator {
     const protein1 = proteins.find(p => p.id === protein1Id);
     const protein2 = proteins.find(p => p.id === protein2Id);
 
-    if (!protein1 || !protein2) return 0;
+    if (!protein1 && !protein2) return 0;
 
     // If outside catering is selected, return 0 (flat fee handled separately)
     if (protein1Id === 'outside' || protein2Id === 'outside') return 0;
 
+    // If only one protein selected
+    if (!protein2) return protein1?.pricePerPerson || 0;
+    if (!protein1) return protein2?.pricePerPerson || 0;
+
+    // If two proteins selected, return average
     return (protein1.pricePerPerson + protein2.pricePerPerson) / 2;
   }
 

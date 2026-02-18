@@ -67,7 +67,9 @@ export const WEDDING_PRICING_CONFIG = {
   // ===================================
   catering: {
     includesSaladAndDessert: true,
-    mustSelectTwo: true,
+    mustSelectTwo: false,
+    minProteins: 1,
+    maxProteins: 2,
     allowOutsideCatering: true,
     outsideCateringFee: 1000,
     

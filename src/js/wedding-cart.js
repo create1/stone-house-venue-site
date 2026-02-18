@@ -280,6 +280,16 @@ class WeddingCart {
           );
           avgPriceDisplay.textContent = WeddingPricingHelpers.formatCurrency(avgPrice);
           avgDisplay.style.display = 'flex';
+        } else if (newCount === 1) {
+          // Show single protein price
+          const proteinId = this.cart.catering.protein1;
+          const protein = WEDDING_PRICING_CONFIG.catering.proteins.find(p => p.id === proteinId);
+          if (protein && protein.pricePerPerson) {
+            avgPriceDisplay.textContent = WeddingPricingHelpers.formatCurrency(protein.pricePerPerson);
+            avgDisplay.style.display = 'flex';
+          } else {
+            avgDisplay.style.display = 'none';
+          }
         } else {
           avgDisplay.style.display = 'none';
         }
@@ -681,8 +691,8 @@ class WeddingCart {
     }
 
     if (this.currentStep === 2) {
-      if (!this.cart.catering.protein1 || !this.cart.catering.protein2) {
-        errors.push('Please select exactly 2 protein options');
+      if (!this.cart.catering.protein1) {
+        errors.push('Please select at least 1 protein option');
       }
     }
 
