@@ -370,14 +370,14 @@ export const WEDDING_PRICING_CONFIG = {
   constraints: {
     guestCount: {
       minimum: 20,
-      maximum: 500,
+      maximum: 150,
       default: 100,
       step: 5,
+      largeEventMessage: 'For weddings with more than 150 guests, please contact us for a custom quote.',
+      largeEventContact: 'bookings@stonehouse.io',
       recommendations: {
-        singleRoom: { min: 20, max: 75, ideal: 50 },
-        partialBuilding: { min: 50, max: 150, ideal: 100 },
-        fullBuilding: { min: 100, max: 250, ideal: 175 },
-        premiumEventCap: { min: 150, max: 500, ideal: 200 }
+        fullBuilding: { min: 50, max: 150, ideal: 100 },
+        premiumEventCap: { min: 100, max: 150, ideal: 125 }
       }
     },
     
