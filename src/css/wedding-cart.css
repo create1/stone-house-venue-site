@@ -872,6 +872,15 @@
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
+  overflow: hidden;
+}
+
+.floral-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 .floral-card:hover {

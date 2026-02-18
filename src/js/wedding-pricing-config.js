@@ -203,6 +203,7 @@ export const WEDDING_PRICING_CONFIG = {
           id: 'classic',
           name: 'Classic Package',
           price: 2500,
+          image: '../src/images/floral/classic-wedding-floral.png',
           includes: [
             'Everything in Intimate package',
             'Ceremony arch/backdrop flowers',
